@@ -2,9 +2,15 @@
 Helper script for controlling alsa sinks via command line. Useful for automating output device selection or just for a simple way to change outputs.
 
 ## How to run
-You should be sitting on a linux distribution that utilises ALSA as its audio interface. Internally the script uses pacmd and pactl to control ALSA so those are also requirements but should come bundled with ALSA. Besides that there are no requirement other than an up to date Bash interpreter, you can run as follows:
 
+### Prerequisites
+- PulseAudio
+- Bash interpreter
+Both the prerequisits are satisfied by default in modern Ubuntu distributions.
+
+To run, set proper permissions and execute:
 ```console
+$ chmod 744 soundx.sh
 $ ./soundx.sh
 ````
 
