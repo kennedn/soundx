@@ -12,7 +12,7 @@ $ ./soundx.sh
 ````
 
 ## Modes
-#### Normal
+### Normal
 Normal mode is what the script assumes if you don't pass any flags. It accepts either a sink index number or a partial/full match for the sinks name. 
 
 Sink name is preferable because a sink index's tends to change over time but a sink name's is fixed. You can list available card names by passing -l or --list:
@@ -27,7 +27,7 @@ After which you can pass a partial or full card name without any other arguments
 ./soundx.sh usb
 ```
 **Note if there are more than one cards that have a partial match, the first is selected.**
-#### Interactive
+### Interactive
 Interactive mode allows you to select from available alsa sinks in a user friendly way and can be run by passing -i or --interactive:
 ```console
 $ ./soundx.sh --interactive
