@@ -46,10 +46,12 @@ if $([ "$1" = "-i" ] || [ "$1" = "--interactive" ]) && [ $# -eq 1 ]; then
     echo    "--------------------------"
     # Prompt for user input of number
     read -rp "Enter #: " tempInput
-    # Lookup real index value based on user selection in array and store
-    userSelect="${idxArr[$((tempInput - 1))]}"
-    # If user input is not a number or is empty, print error and repeat
-    if ! [ ${tempInput} -eq ${tempInput} ] 2> /dev/null || [ -z "${userSelect}" ]; then
+    # If tempInput isn't empty, is a number and is positive, lookup in idxArr array
+    if [ -n "${tempInput}" ] &&  [ ${tempInput} -eq ${tempInput} ] 2> /dev/null && [ "${tempInput}" -gt 0 ]; then
+       userSelect="${idxArr[$((tempInput - 1))]}"
+    fi
+    # If lookup never happened (empty), print error and repeat
+    if [ -z "${userSelect}" ]; then
       userSelect=
       echo "Error: Enter a value from the above table" 
       sleep 0.5
