@@ -5,7 +5,7 @@ Helper script for controlling alsa sinks via command line. Useful for automating
 
 ### Prerequisites
 - PulseAudio
-- Bash interpreter
+- Bash
 
 Both the prerequisits are satisfied by default in modern Ubuntu distributions.
 
