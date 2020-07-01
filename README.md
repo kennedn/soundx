@@ -15,7 +15,7 @@ $ ./soundx.sh
 ### Normal
 Normal mode is what the script assumes if you don't pass any flags. It accepts either a sink index number or a partial/full match for the sinks name. 
 
-Sink name is preferable because a sink index's tends to change over time but a sink name's is fixed. You can list available card names by passing -l or --list:
+Sink name is preferable because a sink index tends to change over time but a sink name is fixed. You can list available card names by passing -l or --list:
 ```console
 $ ./soundx.sh --list
 alsa_output.usb-C-Media_Electronics_Inc._USB_Advanced_Audio_Device-00.analog-stereo
