@@ -1,8 +1,5 @@
 # soundx
-Helper script for controlling alsa sinks via command line. 
-
-## Overview
-This script allows you to control the current audio output device. Useful for automating output device selection or just for a simple way to change outputs.
+Helper script for controlling alsa sinks via command line. Useful for automating output device selection or just for a simple way to change outputs.
 
 ## How to run
 You should be sitting on a linux distribution that utilises ALSA as its audio interface. Internally the script uses pacmd and pactl to control ALSA so those are also requirements but should come bundled with ALSA. Besides that there are no requirement other than an up to date Bash interpreter, you can run as follows:
