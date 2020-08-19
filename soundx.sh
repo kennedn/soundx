@@ -53,8 +53,9 @@ if $([ "$1" = "-i" ] || [ "$1" = "--interactive" ]) && [ $# -eq 1 ]; then
     # If lookup never happened (empty), print error and repeat
     if [ -z "${userSelect}" ]; then
       userSelect=
-      echo "Error: Enter a value from the above table" 
-      sleep 0.5
+      clear
+      echo "Please enter a value between 1 and ${#idxArr[@]}" 
+      read
       clear
     fi
   done
