@@ -6,8 +6,20 @@ Helper script for controlling alsa sinks via command line. Useful for automating
 ### Prerequisites
 - PulseAudio
 - Bash
+- restore_device=false set in /etc/pulse/default.pa
 
-Both the prerequisits are satisfied by default in modern Ubuntu distributions.
+PulseAudio and Bash are both installed by default in modern Ubuntu distributions.
+
+#### Disabling persistant sink settings
+
+By default the pulseaudio daemon will store a default sink property for each application that ever connects to it. Additionally, there is no functionality in any of the command line tools (pactl / pacmd) to modify these stored sink properties. So to allow soundx or any command line script for that matter to actually set the default sink, you must disable the storage mechanism by modifying the following line in /etc/pulse/default.pa:
+```shell
+load-module module-device-restore
+```
+to
+```shell
+load-module module-device-restore restore_device=false
+```
 
 To run, set proper permissions and execute:
 ```console
