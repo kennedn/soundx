@@ -1,4 +1,7 @@
 # soundx
+
+**NOTE: 'soundy' superceeds this project, it can correctly set persistant sink settings, something not possible using shell alone. [(link here)](https://github.com/kennedn/soundy)**
+
 Helper script for controlling alsa sinks via command line. Useful for automating output device selection or just for a simple way to change outputs.
 
 ## How to run
